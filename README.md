@@ -12,7 +12,7 @@ I have created React component caleed dataTable and then i have compiled and exp
 
 This will create a bundle file called data-table and data-table.min.js in public folder
 
-we are directly calling data-table.min.js in our index html file
+we are directly calling data-table.min.js in our index html file. The data-table.min.js has function "dataTable"  This function takes reference to container and headings and row data. It displays the table using the data
 
 
 The we start node server to serve the html file

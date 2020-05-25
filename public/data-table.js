@@ -61,8 +61,9 @@ var dataTable =
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	var dataTable = function dataTable(element) {
-	  _reactDom2.default.render(_react2.default.createElement(_App2.default, null), element);
+	var dataTable = function dataTable(element, headings, rows) {
+
+	  _reactDom2.default.render(_react2.default.createElement(_App2.default, { headings: headings, rows: rows }), element);
 	};
 
 	module.exports = dataTable;
@@ -71,7 +72,7 @@ var dataTable =
 /* 1 */
 /***/ (function(module, exports, __webpack_require__) {
 
-	'use strict';
+	"use strict";
 
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
@@ -90,19 +91,17 @@ var dataTable =
 
 	//import "./styles.css";
 
-	var headings = ['Product name', 'SKU', 'Stock quantity', 'Wholesale cost', 'Sale price', 'Quantity sold', 'Gross sales', 'Net sales', 'Notes'];
 
-	var rows = [['Red and black plaid scarf with thin red stripes and thick black stripes', 124689325, 28, '$35.00', '$60.00', 12, '$720.00', '$300.00', ''], ['Yellow plaid scarf', 124689389, 0, '$35.00', '$60.00', 20, '$1200.00', '$500.00', 'Currently on back order by the supplier. Do not place another order to restock.'], ['Blue plaid scarf', 124689332, 30, '$35.00', '$60.00', 10, '$600.00', '$250.00', ''], ['Pink plaid scarf', 124689376, 16, '$35.00', '$60.00', 4, '$240.00', '$100.00', '']];
-	function App() {
+	function App(props) {
 	  return _react2.default.createElement(
-	    'div',
-	    { className: 'App' },
+	    "div",
+	    { className: "App" },
 	    _react2.default.createElement(
-	      'h1',
+	      "h1",
 	      null,
-	      'Data Table'
+	      "Data Table"
 	    ),
-	    _react2.default.createElement(_DataTable2.default, { rows: rows, headings: headings })
+	    _react2.default.createElement(_DataTable2.default, { rows: props.rows, headings: props.headings })
 	  );
 	}
 

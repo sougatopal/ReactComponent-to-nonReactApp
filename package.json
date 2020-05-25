@@ -29,12 +29,11 @@
   },
   "scripts": {
     "start": "node server.js",
-    "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "bundle-js-dev": "webpack --config ./webpack.dev.config.js",
     "bundle-js-prod": "webpack -p --config ./webpack.prod.config.js",
-    "bundle-js": "npm run bundle-js-dev && npm run bundle-js-prod"
+    "build": "npm run bundle-js-dev && npm run bundle-js-prod"
   },
   "browserslist": [
     ">0.2%",
